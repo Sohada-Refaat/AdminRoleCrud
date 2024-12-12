@@ -1,0 +1,45 @@
+.btn-primary {
+    margin: 20px 20px 30px;
+    display: inline-block
+  }
+  
+  table td,
+  table th {
+    text-align: center;
+    padding: 7px
+  }
+  
+  .hidden {
+    display: none
+  }
+  
+  .m-checkbox-inline label {
+    margin-left: 20px;
+  }
+  
+  :host ::ng-deep .page-count {
+    display: none
+  }
+  
+  .search {
+    display: block;
+    margin: 25px 15px 15px;
+  }
+  
+  .options-header{
+    padding-left: 70px;
+  }
+  
+  .card .card-body {
+    padding: 15px;
+    border: solid;
+  }
+  .wrapper{
+    text-align: center;
+    padding: 5%;
+    width: 89%;
+    margin-top: -29%;
+    margin-left: 7%;
+  }
+  
+  

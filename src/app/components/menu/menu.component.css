@@ -1,0 +1,437 @@
+/*  Start header  */
+
+.navbar {
+    justify-content: space-between;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 2.6rem;
+    padding-bottom: 2rem
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.nav-color {
+    background-color: #F5F5FB;
+    transition: all 2.1s ease-in-out;
+    -webkit-transition: all 2.1s ease-in-out;
+    -moz-transition: all 2.1s ease-in-out;
+    -ms-transition: all 2.1s ease-in-out;
+    -o-transition: all 2.1s ease-in-out;
+    z-index: 99;
+}
+
+.navbar-transparent {
+    background-color: transparent !important;
+    transition: all 2.1s ease-in-out;
+    -webkit-transition: all 2.1s ease-in-out;
+    -moz-transition: all 2.1s ease-in-out;
+    -ms-transition: all 2.1s ease-in-out;
+    -o-transition: all 2.1s ease-in-out;
+}
+
+.iconbar {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav-link.dropdown-toggle {
+    background-color: #E4EDF7;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pd-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 3px;
+}
+
+.mgl-8 {
+    margin-left: 8px;
+}
+
+.pdl-20 {
+    padding-left: 20px;
+}
+
+.pdR-0 {
+    padding-right: 0 !important;
+}
+
+.pdL-0 {
+    padding-left: 0 !important;
+}
+
+.nmgt-8 {
+    margin-top: -8px;
+}
+
+.dropdown-toggle::after {
+    border: solid #3586d3;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-right: 6px;
+}
+
+
+/*  End header  */
+
+
+/**************************   start menu */
+
+.menuoverflow {
+    right: -200%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    z-index: 100;
+    transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease-in-out;
+    -moz-transition: all 0.9s ease-in-out;
+    -ms-transition: all 0.9s ease-in-out;
+    -o-transition: all 0.9s ease-in-out;
+}
+
+.menu-over-flow-show {
+    right: 0 !important;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+.background-image {
+    background-image: url(../../../assets/Assets/Icons/imgbackground.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 11%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menuItem {
+    margin-left: -13px;
+    margin-top: 50px;
+    width: 60%;
+}
+
+.menuItem-img-Home, .menuItem-img-Suppliers, .menuItem-img-Contact {
+    width: 17px;
+    height: 20px;
+    margin-right: 35px;
+    margin-left: 16px;
+}
+
+.offerItem {
+    height: 35px !important;
+}
+
+.menuItem-img-Orders, .menuItem-img-Returns {
+    width: 17px;
+    height: 20px;
+    margin-right: 35px;
+    margin-left: 16px;
+}
+
+.menuItem-img-Returns-expired {
+    width: 48px;
+    height: 40px;
+    margin-right: 8px;
+    margin-left: 16px;
+}
+
+.menuItem-name {
+    font-size: 0.75rem;
+    color: #fff !important;
+    font-family: H-Bold;
+}
+
+.menuItemContiant {
+    display: flex;
+    align-items: center;
+}
+
+.menuItem:hover .menuItemContiant {
+    opacity: 0.5;
+}
+
+.menuItem:hover .menuItemContiant:hover {
+    opacity: 1;
+}
+
+
+/**************************************** end menu */
+
+.padding-top-120 {
+    padding-top: 7.5rem;
+}
+
+.style-icon-home {
+    width: 1.875rem;
+    height: 1.625rem;
+}
+
+.style-logo, .menu-icon {
+    width: 5.36rem;
+    height: 2.03125rem;
+}
+
+.nav-link-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.avater-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.avater-Name {
+    color: #3586D3;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 0.75rem;
+}
+
+/* Custom classes to header dropdown menu and notifications -- Menn Nabil*/
+  ul.navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  .dropdown-menu {
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    margin-top: 10px;
+  }
+  .dropdown-list {
+    width: 23rem!important;
+  }
+  .notification-icon {
+      width: 18px;
+      height: 22px;
+  }
+  .notification-text {
+    font-size: 14px;
+    color: #4F4F4F;
+    white-space: normal;
+  }
+  .notification-time {
+    font-size: 12px;
+    color: #4F4F4F;
+    opacity: 0.5;
+  }
+  .dropdown-menu-right {
+    right: 0;
+    left: auto;
+  }
+  .dropdown-item:hover, .dropdown-item:focus {
+      color: #3586d3;
+      text-decoration: none;
+      background-color: #e0e9f7;
+  }
+  a.view-all-link {
+    padding: 0.75rem;
+    color: #3586d3;
+    font-size: 14px;
+  }
+  .point-item {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    text-align: center;
+  }
+  .dropdown-divider {
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    border-top: 1px solid #eaecf4;
+  }
+  .dropdown-item {
+    color: #77869D;
+    border-left: 3px solid transparent;
+  }
+  a.dropdown-item:hover {
+    border-left: 3px solid #3586D3;
+  }
+  a.dropdown-item:hover .notification-time {
+    color: #3586D3;
+  }
+  .point-item p {
+    margin-bottom: 0.25rem;
+  }
+  .point-item img {
+    width: 28px;
+    height: 34px;
+  }
+  .shadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,.15)!important;
+  }
+
+  
+
+@media (max-width:1200px) {
+    .menuItem {
+        width: 90%;
+    }
+}
+
+@media (max-width:768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 2.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .style-logo, .menu-icon {
+        width: 87px;
+        height: 32.5px;
+    }
+    .menuItem-name {
+        font-size: 37px;
+    }
+    .menuItem-img-Home, .menuItem-img-Suppliers, .menuItem-img-Contact, .menuItem-img-Orders, .menuItem-img-Returns, .offerItem {
+        width: 42.6px;
+        height: 39.7px;
+    }
+    .menuItem {
+        width: 100%;
+        margin-left: 51px;
+        margin-top: 30px;
+    }
+    .background-image {
+        background-image: url(./../../../assets/Assets/Icons/Menu-BG-Tablet.jpg);
+    }
+    .mb-40 {
+        margin-bottom: 20px;
+    }
+    .notification-icon {
+        width: 11px;
+        height: 13px;
+    }
+    .notification-text {
+      font-size: 11px;
+    }
+    .notification-time {
+      font-size: 9px;
+    }
+    a.view-all-link {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar {
+        flex-flow: row;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-sm .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+    .style-logo, .menu-icon {
+        width: 70px;
+    }
+    .nav-link-icon {
+        width: 27px;
+        height: 21px;
+    }
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+        float: none;
+    }
+    .avater-Name {
+        display: none;
+    }
+    .iconbar {
+        padding-left: 10px;
+    }
+    .avater-img {
+        margin-right: 4px;
+    }
+    .menuItem-name {
+        font-size: 30px;
+    }
+    .menuItem-img-Home, .menuItem-img-Suppliers, .menuItem-img-Contact, .menuItem-img-Orders, .menuItem-img-Returns, .menuItem-img-Returns-expired, .offerItem {
+        width: 25.7px;
+        height: 23.9px;
+        margin-right: 22px;
+    }
+    .menuItem {
+        width: 100%;
+        margin-left: 51px;
+    }
+    .menuItemContiant {
+        margin-bottom: 24px;
+    }
+    .background-image {
+        background-image: url(./../../../assets/Assets/Icons/Menu-BG-Mobile.jpg);
+    }
+    .notification-icon {
+        width: 7px;
+        height: 8px;
+    }
+    .notification-text {
+      font-size: 7px;
+    }
+    .notification-time {
+      font-size: 6px;
+    }
+    .dropdown-list{
+        width: 15rem!important;
+    }
+    .dropdown-item {
+        padding: .25rem 0.5rem;
+    }
+    a.view-all-link {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 325px) {
+    .navbar {
+        padding-left: 10px;
+        padding-right: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    .menuItem-name {
+        font-size: 19px;
+    }
+}

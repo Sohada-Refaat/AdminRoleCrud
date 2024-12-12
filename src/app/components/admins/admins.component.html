@@ -1,0 +1,96 @@
+<div class="wrapper">
+    <!-- Container-fluid starts -->
+    <div class="container-fluid">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-6">
+              <h3>Admins</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Container-fluid Ends -->
+      <!-- Container-fluid starts -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card">
+              <form class="form theme-form" [formGroup]="adminForm">
+                <div class="card-body">
+                  <div class="row">
+      
+                    <div class="col-sm-6">
+                      <label class="col-form-label">Name</label>
+                      <input type="text" class="form-control form-control-sm" formControlName="name"
+                             placeholder="Name">
+                             <div *ngIf="!adminForm.get('name')!.valid && isSubmitted"><span class="err">*</span>
+                                <small class="text text-danger" *ngIf="adminForm.get('name')!.hasError('required')">
+                                    Name required</small>
+                              </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="col-form-label">Email</label>
+                        <input type="email" class="form-control form-control-sm" formControlName="email" placeholder="Email">
+                        <div *ngIf="!adminForm.get('email')!.valid && isSubmitted"><span class="err">*</span>
+                          <small class="text text-danger" *ngIf="adminForm.get('email')!.hasError('required')">This field is
+                            required.</small>
+                          <small class="text text-danger" *ngIf="adminForm.get('email')!.hasError('email')">Not Valid email</small>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label class="col-form-label">Role</label>
+                        <ngx-select-dropdown (change)="selectionChangedRole($event)" formControlName="roleName" [multiple]="false"
+                          [config]="config" [options]="dropdownOptions"></ngx-select-dropdown>
+                        <ngx-select-dropdown formControlName="roleId" [multiple]="false" hidden
+                          [config]="config" [options]="dropdownOptions"></ngx-select-dropdown>
+                      </div>
+                      
+                  </div>
+                  <div class="row">
+                    <button type="submit" class="btn btn-primary  search" (click)="create()" 
+                    *ngIf="crudMode == 'Add' ">Add</button>
+                    <button type="submit" class="btn btn-primary  search" (click)="edit()" 
+                    *ngIf="crudMode == 'Edit' ">Edit</button>
+                    <button type="submit" class="btn btn-primary  search" (click)="cancel()" 
+                    *ngIf="crudMode == 'Edit' ">Cancel</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+      
+            <div class="card">
+              <div class="card-body">
+                <input type='text' class="filter-ngx" placeholder='Type to filter adminName'
+                       (keyup)='updateFilter($event)'/>
+                <ngx-datatable class='bootstrap' [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50" 
+                [rowHeight]="'auto'" [rows]='rows' [scrollbarH]="true">
+                  <ngx-datatable-column prop="name" name="Name" [width]= "50" [maxWidth]="170"
+                  [canAutoResize]="true"></ngx-datatable-column>
+                  <ngx-datatable-column prop="email" name="Email" [width]= "50" [maxWidth]="170"
+                  [canAutoResize]="true"></ngx-datatable-column>
+                  <ngx-datatable-column prop="roleName" name="Role Name" [width]= "50" [maxWidth]="170"
+                  [canAutoResize]="true">
+                  </ngx-datatable-column>
+                  <ngx-datatable-column name='Options' [sortable]="false" [canAutoResize]="true"
+                  [width] = "210" [maxWidth]="220" [draggable]="false" [resizeable]="false"
+                  [headerClass] = "'options-header'">
+                    <ng-template let-value="value" let-row="row" let-rowIndex="rowIndex" ngx-datatable-cell-template>
+                      <!-- Pencil icon -->
+                      <div class="text-center">
+                        <button type="button" class="btn btn-warning edit mx-1" (click)="onEdit(row)">
+                          <i class="fa fa-pencil" title="Modify"></i>
+                        </button>
+                        <button class="btn btn-danger edit mx-1" (click)="onDelete(row)">
+                        <i class="fa fa-trash-o" title="Delete"></i>
+                      </button>
+                      </div>
+                    </ng-template>
+                  </ngx-datatable-column>
+                </ngx-datatable>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
